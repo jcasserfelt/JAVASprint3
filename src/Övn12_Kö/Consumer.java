@@ -1,4 +1,4 @@
-package Övn9_Kö;
+package Övn12_Kö;
 
 
 public class Consumer implements Runnable{
