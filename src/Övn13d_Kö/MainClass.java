@@ -1,4 +1,4 @@
-package Övn13_Kö;
+package Övn13d_Kö;
 
 import java.util.Scanner;
 
@@ -19,7 +19,7 @@ public class MainClass {
             int pri = sc.nextInt();
             System.out.println("Text? ");
             String txt = sc.next();
-            p[i] = new Producer(txt, time, buf);
+            p[i] = new Producer(txt, time,pri, buf);
         }
         
         System.out.println("Amount of comsumers: ");

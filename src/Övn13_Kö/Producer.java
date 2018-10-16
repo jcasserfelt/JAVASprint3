@@ -1,6 +1,7 @@
 package Övn13_Kö;
 
 
+
 public class Producer implements Runnable{
     
     public Thread aktivitet = new Thread(this);
@@ -9,10 +10,9 @@ public class Producer implements Runnable{
     private SimpleQueue q;
     private int prio;
     
-    public Producer (String txt, long sec, int prio, SimpleQueue k){
+    public Producer (String txt, long sec, SimpleQueue k){
         interval = sec * 1000;
         q = k;
-        this.prio = prio;
         obj = new QueueElement(txt);
     }
     

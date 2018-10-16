@@ -1,4 +1,5 @@
-package Övn13_Kö;
+package Övn13d_Kö;
+
 
 public class Consumer implements Runnable{
     public Thread aktivitet = new Thread(this);

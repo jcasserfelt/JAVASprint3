@@ -1,8 +1,8 @@
-package Övn13_Kö;
-
+package Övn13d_Kö;
 
 public class  QueueElement {
    protected String text;
+   protected int pri;
 
    QueueElement(String o) {
      text=o; 

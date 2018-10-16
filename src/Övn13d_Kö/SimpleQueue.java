@@ -1,4 +1,4 @@
-package Övn13_Kö;
+package Övn13d_Kö;
 
 import java.util.*;
 
@@ -11,8 +11,13 @@ import java.util.*;
 
    public synchronized void put(QueueElement obj) {
        System.out.println("Putting "+ obj.getText());
-  
-        l.add(obj);
+     int p = Thread.currentThread().getPriority();
+     int i;
+     
+     //leta baklänges i kön tills rätt prio hittas
+     for (i=size()-1; i>=0 && p > ((QueueElement) l.get(i)).pri; i--)
+       ;     
+        l.add(i+1, obj);
         notify();
      
    }
