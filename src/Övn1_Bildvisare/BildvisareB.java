@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JLabel;
 
-
+//Togglar mellan två bilder
 public class BildvisareB extends JFrame implements ActionListener {
     
     JButton changeImageButton;

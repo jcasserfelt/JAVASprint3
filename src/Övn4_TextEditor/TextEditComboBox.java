@@ -60,7 +60,9 @@ import javax.swing.*;
        try {
            area.print();  // skriver ut texten, kan ge exception
        }
-       catch (Exception ex) {}
+       catch (Exception ex) {
+           ex.printStackTrace();
+       }
      else if (e.getSource() == sluta) {
          sparaNerFilnamn();
          System.exit(0);      

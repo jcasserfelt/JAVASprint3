@@ -1,4 +1,4 @@
-package Övn3_Bilhyra;
+package Övn2_Bilhyra;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;

@@ -1,4 +1,4 @@
-package Övn8_BMICalculator;
+package Övn9_BMICalculator;
 
 
 import java.util.Scanner;
@@ -13,7 +13,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 
-public class BMICalculator extends Application {
+public class BMICalculatorFx extends Application {
     
     public static double getBMI(double weight, double length){
         double lengthInMeter = length/100;

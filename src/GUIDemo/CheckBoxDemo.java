@@ -2,8 +2,6 @@ package GUIDemo;
 
 import java.awt.*; 
 import java.awt.event.*; 
-import java.io.*; 
-import java.util.Vector;
 import javax.swing.*; 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 

@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JLabel;
 
-
+//Visar en bild
 public class BildvisareA extends JFrame {
     
     JButton changeImageButton;

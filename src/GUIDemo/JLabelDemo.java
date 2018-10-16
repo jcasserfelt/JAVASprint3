@@ -18,6 +18,7 @@ public class JLabelDemo extends JFrame {
         pack();
         setSize(300, 300);
         setLocation(1000, 500);
+        pack();
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }

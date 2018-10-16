@@ -1,4 +1,4 @@
-package Övn6_PengarTillbaka;
+package Övn3_PengarTillbaka;
 
  // Filen Vaxel.java
  import java.awt.*;

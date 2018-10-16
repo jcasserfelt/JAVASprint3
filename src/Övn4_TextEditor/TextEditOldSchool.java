@@ -6,7 +6,7 @@ import java.awt.*;
  import javax.swing.*; 
 
 
- public class TextEditOrginal extends JFrame implements ActionListener { 
+ public class TextEditOldSchool extends JFrame implements ActionListener { 
    private JPanel p = new JPanel(); 
    private JTextField namn  = new JTextField(); 
    private JButton    öppna = new JButton("Öppna"); 
@@ -18,7 +18,7 @@ import java.awt.*;
                        JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
                        JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 
-   public TextEditOrginal() { 
+   public TextEditOldSchool() { 
      area.setFont(new Font("Monospaced", Font.PLAIN, 12)); 
      p.setLayout(new GridLayout(1,6)); 
      p.add(new JLabel("Filnamn: ", JLabel.RIGHT));  
@@ -39,8 +39,7 @@ import java.awt.*;
 
    public void actionPerformed(ActionEvent e) { 
      // undersök vilken knapp användaren har tryckt på 
-     //if (e.getSource() == namn || e.getSource() == öppna)    
-     if (e.getSource() == öppna)    
+     if (e.getSource() == namn || e.getSource() == öppna)    
        läsInFil(namn.getText());    
      else if (e.getSource() == spara)  
        sparaFil(namn.getText());
@@ -48,7 +47,9 @@ import java.awt.*;
        try {
            area.print();  // skriver ut texten, kan ge exception
        }
-       catch (Exception ex) {}
+       catch (Exception ex) {
+           ex.printStackTrace();
+       }
      else if (e.getSource() == sluta) 
        System.exit(0);      
     } 
@@ -58,7 +59,9 @@ import java.awt.*;
         FileReader r = new FileReader(filnamn); 
         area.read(r, null); 
      } 
-     catch (IOException e) {} 
+     catch (IOException e) {
+         e.printStackTrace();
+     } 
    } 
 
    private void sparaFil(String filnamn) { 
@@ -66,10 +69,12 @@ import java.awt.*;
        FileWriter w = new FileWriter(filnamn); 
        area.write(w); 
      }
-     catch (IOException e) {}
+     catch (IOException e) {
+            e.printStackTrace();
+       }
    } 
 
    public static void main (String[] arg) { 
-     TextEditOrginal t = new TextEditOrginal(); 
+     TextEditOldSchool t = new TextEditOldSchool(); 
    }   
  }

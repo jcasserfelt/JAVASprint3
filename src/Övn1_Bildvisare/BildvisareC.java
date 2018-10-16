@@ -17,8 +17,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-
-public class Bildvisare extends JFrame implements ActionListener {
+//Läser godtyckligt antal bilder från en katalog
+public class BildvisareC extends JFrame implements ActionListener {
     JButton changeImageButton;
     JLabel imageViewer;
     final String imagePath = "src\\övningsuppgift1\\images\\";
@@ -28,7 +28,6 @@ public class Bildvisare extends JFrame implements ActionListener {
     List <String> imageFileNames = new ArrayList<>();
     
     protected List <String> loadImageNames(Path imageDir){
-        //List <String> imageFileNames = new ArrayList<> ();
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(imageDir)) {
             for (Path file: stream) {
                 imageFileNames.add(file.getFileName().toString());
@@ -40,7 +39,7 @@ public class Bildvisare extends JFrame implements ActionListener {
         return imageFileNames;
     }
 
-    public Bildvisare() {
+    public BildvisareC() {
         imageFileNames = loadImageNames(imageFolder);
         imageCount = imageFileNames.size();
         changeImageButton = new JButton("Byt bild");
@@ -56,7 +55,7 @@ public class Bildvisare extends JFrame implements ActionListener {
     }
     
     public static void main(String args[]){
-        Bildvisare bildvisare = new Bildvisare();
+        BildvisareC bildvisare = new BildvisareC();
     }
 
     @Override

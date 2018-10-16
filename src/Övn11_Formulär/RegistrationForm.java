@@ -1,4 +1,4 @@
-package Övn10_Formulär;
+package Övn11_Formulär;
 
 
 import java.io.IOException;
@@ -7,9 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.application.Application; 
 import static javafx.application.Application.launch; 
 import javafx.event.ActionEvent;
@@ -18,7 +15,6 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos; 
 import javafx.scene.Scene; 
 import javafx.scene.control.Button; 
-import javafx.scene.control.PasswordField; 
 import javafx.scene.layout.GridPane; 
 import javafx.scene.text.Text; 
 import javafx.scene.control.TextField; 
