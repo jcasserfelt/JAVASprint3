@@ -1,9 +1,8 @@
 package Övn4_TextEditor;
 
 import java.awt.*; 
- import java.awt.event.*; 
- import java.io.*; 
- import javax.swing.*; 
+import java.io.*; 
+import javax.swing.*; 
 
 
  public class TextEditLambdas extends JFrame { 

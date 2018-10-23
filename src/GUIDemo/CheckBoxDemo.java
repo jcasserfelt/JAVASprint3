@@ -30,15 +30,18 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
    public void actionPerformed(ActionEvent e) { 
        
      if (e.getSource() == red){
-         p.setBackground(Color.red);
+         p.setForeground(Color.red);
+         //red.setBackground(Color.red);
+         //blue.setBackground(Color.red);
+         //yellow.setBackground(Color.red);
          displayArea.setText("Du valde rött");
      }
      else if (e.getSource() == blue){
-         p.setBackground(Color.blue);
+         p.setForeground(Color.blue);
          displayArea.setText("Du valde blått");
      }
      else if (e.getSource() == yellow){
-         p.setBackground(Color.yellow);
+         p.setForeground(Color.yellow);
          displayArea.setText("Du valde gult");
      }
     } 

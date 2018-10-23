@@ -43,7 +43,8 @@ public class BildvisareC extends JFrame implements ActionListener {
         imageFileNames = loadImageNames(imageFolder);
         imageCount = imageFileNames.size();
         changeImageButton = new JButton("Byt bild");
-        imageViewer = new JLabel(new ImageIcon(imagePath + imageFileNames.get(imageIndex)));
+        imageViewer = new JLabel(new ImageIcon(imagePath 
+                + imageFileNames.get(imageIndex)));
         setLayout(new FlowLayout());
         getContentPane().setBackground(Color.BLACK);
         add(imageViewer);

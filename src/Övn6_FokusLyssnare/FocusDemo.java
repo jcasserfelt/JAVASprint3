@@ -15,7 +15,8 @@ public class FocusDemo extends JFrame {
     add(överst, BorderLayout.NORTH); add(nederst, BorderLayout.SOUTH); 
     addWindowListener(fönsterLyss);
     första.addFocusListener(focusLyss);
-    setSize(200,100);
+    //setSize(200,100);
+    setSize(500,500);
     setVisible(true);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
   }

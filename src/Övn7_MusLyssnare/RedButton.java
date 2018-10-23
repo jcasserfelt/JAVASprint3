@@ -4,6 +4,9 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+//På Mac måste även opaciteten för knappen justeras 
+//för att detta ska funka
+
 public class RedButton extends JFrame {
   JButton  b = new JButton("Röd");
  

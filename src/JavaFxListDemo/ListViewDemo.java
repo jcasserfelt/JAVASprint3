@@ -1,7 +1,5 @@
 package JavaFxListDemo;
 
-import java.util.ArrayList;
-import java.util.List;
 import javafx.application.*; 
 import javafx.scene.*; 
 import javafx.stage.*; 
