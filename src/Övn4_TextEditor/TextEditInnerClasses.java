@@ -63,8 +63,9 @@ import java.awt.event.ActionListener;
      p.add(skriv); 
      p.add(sluta); 
      
-     namn.addActionListener(new ReadFileListener());  
-     öppna.addActionListener(new ReadFileListener());  
+     ReadFileListener reader = new ReadFileListener();
+     namn.addActionListener(reader);  
+     öppna.addActionListener(reader);  
      spara.addActionListener(new SaveFileListener()); 
      skriv.addActionListener(new PrintFileListener());
      sluta.addActionListener(new ExitListener());

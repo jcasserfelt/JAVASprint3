@@ -6,7 +6,8 @@ import java.awt.*;
  import javax.swing.*; 
 
 
- public class TextEditOldSchool extends JFrame implements ActionListener { 
+ public class TextEditOldSchool extends JFrame 
+         implements ActionListener { 
    private JPanel p = new JPanel(); 
    private JTextField namn  = new JTextField(); 
    private JButton    öppna = new JButton("Öppna"); 
@@ -55,8 +56,7 @@ import java.awt.*;
     } 
 
    private void läsInFil(String filnamn) { 
-     try { 
-        FileReader r = new FileReader(filnamn); 
+     try (FileReader r = new FileReader(filnamn)) { 
         area.read(r, null); 
      } 
      catch (IOException e) {
@@ -65,8 +65,7 @@ import java.awt.*;
    } 
 
    private void sparaFil(String filnamn) { 
-     try { 
-       FileWriter w = new FileWriter(filnamn); 
+     try (FileWriter w = new FileWriter(filnamn)) { 
        area.write(w); 
      }
      catch (IOException e) {

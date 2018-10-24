@@ -31,7 +31,8 @@ import javax.swing.*;
      öppna.addActionListener(l -> {läsInFil(namn.getText());});  
      spara.addActionListener(l -> {sparaFil(namn.getText());}); 
      skriv.addActionListener(l -> {try {area.print();}
-                                   catch (Exception ex) {ex.printStackTrace();}
+                                   catch (Exception ex) 
+                                   {ex.printStackTrace();}
                                   });
      sluta.addActionListener(l -> {System.exit(0);});
      
