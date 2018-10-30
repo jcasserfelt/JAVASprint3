@@ -1,6 +1,6 @@
 package JavaFxBMICalculatorMVC;
 
-
+//Vyn
 import java.util.Scanner;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -36,8 +36,11 @@ public class BMICalculatorView extends Application {
             public void handle(ActionEvent event) {
                 Scanner scLength = new Scanner(lengthTxt.getText().trim());
                 Scanner scWeight = new Scanner(weightTxt.getText().trim());
-                if (scLength.hasNextDouble() && scWeight.hasNextDouble()){
-                    Person p = new Person(nameTxt.getText(), scLength.nextDouble(), scWeight.nextDouble());
+                if (scLength.hasNextDouble() 
+                        && scWeight.hasNextDouble()){
+                    Person p = new Person(nameTxt.getText(), 
+                            scLength.nextDouble(), 
+                            scWeight.nextDouble());
                     String res = controller.getBMIInfo(p);
                     System.out.println(res);
                     result.setText(res);

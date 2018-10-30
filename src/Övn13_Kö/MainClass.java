@@ -15,8 +15,6 @@ public class MainClass {
             System.out.println("Producer no "+ (i+1) + ":");
             System.out.println(" Interval:");
             int time = sc.nextInt();
-            System.out.println(" Prio:");
-            int pri = sc.nextInt();
             System.out.println("Text? ");
             String txt = sc.next();
             p[i] = new Producer(txt, time, buf);

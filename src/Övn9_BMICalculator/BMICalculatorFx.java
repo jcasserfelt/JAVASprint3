@@ -5,6 +5,7 @@ import java.util.Scanner;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -37,12 +38,16 @@ public class BMICalculatorFx extends Application {
             
             @Override
             public void handle(ActionEvent event) {
-                Scanner scLength = new Scanner(lengthTxt.getText().trim());
-                Scanner scWeight = new Scanner(weightTxt.getText().trim());
-                if (scLength.hasNextDouble() && scWeight.hasNextDouble()){
+                Scanner scLength = new Scanner(lengthTxt
+                        .getText().trim());
+                Scanner scWeight = new Scanner(weightTxt
+                        .getText().trim());
+                if (scLength.hasNextDouble() 
+                        && scWeight.hasNextDouble()){
                     String res = String.format("Hej %s. "
                         + "Ditt BMI är %.2f.", nameTxt.getText(), 
-                        getBMI(scWeight.nextDouble(), scLength.nextDouble()));
+                        getBMI(scWeight.nextDouble(), 
+                                scLength.nextDouble()));
                     System.out.println(res);
                     result.setText(res);
                 }

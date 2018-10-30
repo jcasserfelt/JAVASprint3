@@ -54,8 +54,10 @@ public class RegistrationFormA extends Application {
       gridPane.add(button2, 1, 3); 
        
       //Styling nodes  
-      button1.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;"); 
-      button2.setStyle("-fx-background-color: darkslateblue; -fx-text-fill: white;"); 
+      button1.setStyle("-fx-background-color: darkslateblue; "
+              + "-fx-text-fill: white;"); 
+      button2.setStyle("-fx-background-color: darkslateblue; "
+              + "-fx-text-fill: white;"); 
       
       Path outFilePath = Paths.get("src\\Övn11_Formulär\\RegisteredUsers.txt");
       
@@ -67,8 +69,11 @@ public class RegistrationFormA extends Application {
                 String lastName = textField2.getText();
                 String email = textField3.getText();
                 
-                try(PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath, StandardOpenOption.APPEND), true)){
-                    w.print(firstName + "," + lastName+ "," + email+ "\n");
+                try(PrintWriter w = new PrintWriter(Files
+                        .newBufferedWriter(outFilePath, 
+                        StandardOpenOption.APPEND), true)){
+                    w.print(firstName + "," + lastName+ "," 
+                            + email+ "\n");
                         
                 }
                 catch (IOException ex) {

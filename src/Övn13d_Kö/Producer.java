@@ -13,7 +13,7 @@ public class Producer implements Runnable{
         interval = sec * 1000;
         q = k;
         this.prio = prio;
-        obj = new QueueElement(txt);
+        obj = new QueueElement(txt, prio);
     }
     
     public void run(){

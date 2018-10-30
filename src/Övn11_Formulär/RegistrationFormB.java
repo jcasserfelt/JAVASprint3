@@ -65,7 +65,8 @@ public class RegistrationFormB extends Application {
                 String lastName = textField2.getText();
                 String email = textField3.getText();
                 
-                try(PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath, StandardOpenOption.APPEND), true)){
+                try(PrintWriter w = new PrintWriter(Files.newBufferedWriter(outFilePath, 
+                        StandardOpenOption.APPEND), true)){
                     w.print(firstName + "," + lastName+ "," + email+ "\n");
                         
                 }

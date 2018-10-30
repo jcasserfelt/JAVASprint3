@@ -1,6 +1,6 @@
 package JavaFxBMICalculatorMVC;
 
-
+//Modellen
 public class Person {
     
     private double weight;

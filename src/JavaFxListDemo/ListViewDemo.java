@@ -1,5 +1,7 @@
 package JavaFxListDemo;
 
+import java.util.ArrayList;
+import java.util.List;
 import javafx.application.*; 
 import javafx.scene.*; 
 import javafx.stage.*; 
@@ -42,25 +44,28 @@ public class ListViewDemo extends Application {
     response = new Label("Select Computer Type"); 
  
     // Create an ObservableList of entries for the list view. 
+    //Detta är namnen som står i listan
    ObservableList<String> computerTypes = 
-      FXCollections.observableArrayList("Smartphone", "Tablet", "Notebook", 
-                                        "Desktop" );  
+      FXCollections.observableArrayList("Smartphone", "Tablet", 
+              "Notebook", "Desktop" );  
  
-
 // Create the list view. 
+//Detta är den grafiska komponenten som visar upp listan
     ListView<String> lvComputers = new ListView<String>(computerTypes); 
       
  
     //Alternativ om man vill slippa ObservableList:an:
-    //ListView<String> lvComputers = new ListView<String>(); 
-    //lvComputers.getItems().addAll("Smartphone", "Tablet", "Notebook", "Desktop");
+ //   ListView<String> lvComputers = new ListView<String>(); 
+ //   lvComputers.getItems().addAll("Smartphone", "Tablet", "Notebook", "Desktop");
  
     // Set the preferred height and width. 
     lvComputers.setPrefSize(100, 70); 
  
     // Get the list view selection model. 
+    //Vi får information om vilka rader som valts via listViewns selectionModel
     MultipleSelectionModel<String> lvSelModel = 
-                                     lvComputers.getSelectionModel(); 
+                      lvComputers.getSelectionModel(); 
+    
  
     // Use a change listener to respond to a change of selection within 
     // a list view. 
@@ -79,7 +84,6 @@ public class ListViewDemo extends Application {
  
     // Show the stage and its scene. 
     myStage.show(); 
-    
-    computerTypes.add("fdsfdsfs");
+
   } 
 }
